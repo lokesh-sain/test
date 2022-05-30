@@ -1,0 +1,26 @@
+{
+  "name": "quickshare.io",
+  "version": "1.0.0",
+  "description": "file sharing service application",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "serve": "nodemon server.js"
+  },
+  "author": "LOKESH SAIN",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4",
+    "multer": "^1.4.4",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

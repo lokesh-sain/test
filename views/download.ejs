@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs')%>
+<%- include('../partials/nav.ejs')%>
+
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center my-5">
+        <div class="col-10 col-sm-8 col-md-8 col-lg-6 text-center ">
+           <div class="download-wrapper">
+            <% if(locals.error) { %>
+                <div class="whenError my-4">
+                    <img src="/assets/images/error.svg" alt="" srcset="" class="img-fluid pb-4">
+                    <p class="text-secondary h6 my-3"><%=locals.error%></p>
+                   <a href="/"><button class="btn btn-primary my-2">Back Homepage</button></a>
+                </div>
+            <% } else { %>
+                <div class="imgPanel pb-4 ">
+                    <img src="/assets/images/downloading.svg" alt="" srcset="" class="img-fluid ">
+                  </div>
+    
+                    <div class="information-wrapper ">
+                        <h3 class="text-p-my my-1">Your file is ready to download</h3>
+                        <p class="text-secondary my-3">Link will expire in 24 hours.</p>
+                        <h6 class="text-dark my-1"><%=filename%></h6>
+                        <p class="text-secondary my-0"><%=size%></p>
+                        <div class="button-wrapper mt-4 mb-1">
+                            <a href="<%=downloadLink%>"><button class="btn btn-primary ps-1">
+                            <img src="/assets/images/download.svg" alt="icon" class="img-fluid ms-0 ps-0">
+                            Download File</button></a>
+                        </div>
+                    </div>
+            <% } %>
+           </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs')%>
+ 
+
